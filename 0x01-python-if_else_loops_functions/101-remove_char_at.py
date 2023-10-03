@@ -9,9 +9,9 @@ def remove_char_at(str, n):
     if n > (total - 1) or n < 0:
         return str
 
-    blacklist = str[n]
+    b = str[n]
     for c in str:
-        if c != blacklist:
+        if c != b:
             strcpy += c
 
     return strcpy
