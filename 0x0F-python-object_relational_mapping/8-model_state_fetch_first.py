@@ -8,10 +8,10 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-    engn = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
-    Base.metadata.create_all(engn)
-    Session = sessionmaker(bind=engn)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State).first()
     if instance is None:
