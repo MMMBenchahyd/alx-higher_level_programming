@@ -10,4 +10,4 @@ if __name__ == '__main__':
 
     payload = {'email': sys.argv[2]}
     rq = requests.post(sys.argv[1], data=payload)
-    print(r.text)
+    print(rq.text)
